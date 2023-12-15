@@ -114,7 +114,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>jar-elshub</finalName>
+		<finalName>jar-elhub</finalName>
 	</build>
 
 </project>
