@@ -114,6 +114,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>jar-ehub</finalName>
 	</build>
 
 </project>
