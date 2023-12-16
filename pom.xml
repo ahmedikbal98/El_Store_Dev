@@ -102,19 +102,32 @@
 		
 	</dependencies>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-				<configuration>
-					<image>
-						<builder>paketobuildpacks/builder-jammy-base:latest</builder>
-					</image>
-				</configuration>
-			</plugin>
-		</plugins>
-		<finalName>jar-elhub</finalName>
-	</build>
+<build>
+    <plugins>
+        <!-- Other plugins... -->
+
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.11.0</version> <!-- Update to a version that supports Java 17 -->
+            <configuration>
+                <release>17</release>
+            </configuration>
+        </plugin>
+        
+        <!-- Spring Boot Maven plugin -->
+        <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <configuration>
+                <image>
+                    <builder>paketobuildpacks/builder-jammy-base:latest</builder>
+                </image>
+            </configuration>
+        </plugin>
+    </plugins>
+    <finalName>jar-elhub</finalName>
+</build>
+
 
 </project>
